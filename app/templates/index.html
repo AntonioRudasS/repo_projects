@@ -18,13 +18,16 @@
       <div class="card card-body">
         <form action="{{url_for('contacts.add_contact')}}" method="POST">
           <div class="form-group">
-            <input type="text" class="form-control" name="fullname" placeholder="FullName">
+            <input type="text" class="form-control" name="autor" placeholder="Autor">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="email" placeholder="Email">
+            <input type="text" class="form-control" name="titulo" placeholder="Titulo">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="phone" placeholder="Phone">
+            <input type="text" class="form-control" name="objetivo" placeholder="Objetivo">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="abstract" placeholder="Abstract">
           </div>
           <button class="btn btn-primary btn-block">
             Save 
@@ -37,19 +40,20 @@
         <thead>
           <tr>
             <td>ID</td>
-            <td>fullname</td>
-            <td>email</td>
-            <td>phone</td>
-            <td>Operations</td>
+            <td>Autor</td>
+            <td>Titulo</td>
+            <td>Objetivo</td>
+            <td>Abstract</td>
           </tr>
         </thead>
         <tbody>
           {% for contact in contacts %}
           <tr>
             <td>{{contact.id}}</td>
-            <td>{{contact.fullname}}</td>
-            <td>{{contact.email}}</td>
-            <td>{{contact.phone}}</td>
+            <td>{{contact.autor}}</td>
+            <td>{{contact.titulo}}</td>
+            <td>{{contact.objetivo}}</td>
+            <td>{{contact.abstract}}</td>
             <td>
               <a href="/edit/{{contact.id}}" class="btn btn-secondary">edit</a>
               <a href="/delete/{{contact.id}}" class="btn btn-danger btn-delete">delete</a>
