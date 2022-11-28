@@ -1,8 +1,12 @@
 from flask import Blueprint, request, render_template, redirect, url_for, flash
 from db import mysql
+from app import app
 
 contacts = Blueprint('contacts', __name__, template_folder='app/templates')
 
+@contacts.route('/upload')
+def upload():
+    pass
 
 @contacts.route('/')
 def Index():
