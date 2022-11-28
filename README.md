@@ -1,21 +1,21 @@
-# Screenshot
+# Proyecto Web Final 🚀 
 
-![](docs/screenshot.png)
+### 🤖 Guía Rápida
 
-### Installation
+##### Requirements
 
-```bash
-git clone https://github.com/FaztWeb/flask-crud-contacts-app
-cd flask-crud-contacts-app
+* Python3
+* Mysql
+
+Instalamos todas las dependencias.
+
+```
+cd AvocadoShop-API
 pip install -r requirements.txt
-python app/main.py
+python index.py
 ```
 
-### issues
-- sudo apt-get install libmysqlclient-dev
+El sitio estará disponible en http://localhost:3000.
 
-### TODO
-
-* [ ] add authentication
-* [ ] form validation
-* [ ] docker-compose
+Happy hacking!
+-> Barros estuvo aqui :3
