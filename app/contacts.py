@@ -22,13 +22,13 @@ def add_project():
         abstract = request.form['abstract']
         try:
             cur = mysql.connection.cursor()
-            cur.execute("INSERT INTO usuario (autor, titulo, objetivo, abstract) VALUES (%s,%s,%s)", (autor, titulo, objetivo, abstract))
+            cur.execute("INSERT INTO usuario (autor, titulo, objetivo, abstract) VALUES (%s,%s,%s,%s)", (autor, titulo, objetivo, abstract))
             mysql.connection.commit()
             flash('Project Added successfully')
-            return redirect(url_for('project.Index'))
+            return redirect(url_for('contacts.Index'))
         except Exception as e:
             flash(e.args[1])
-            return redirect(url_for('project.Index'))
+            return redirect(url_for('contacts.Index'))
 
 
 @contacts.route('/edit/<id>', methods=['POST', 'GET'])
@@ -59,7 +59,7 @@ def update_project(id):
         """, (autor, titulo, objetivo, abstract, id))
         flash('Project Updated Successfully')
         mysql.connection.commit()
-        return redirect(url_for('project.Index'))
+        return redirect(url_for('contacts.Index'))
 
 
 @contacts.route('/delete/<string:id>', methods=['POST', 'GET'])
@@ -68,4 +68,4 @@ def delete_project(id):
     cur.execute('DELETE FROM usuario WHERE id = {0}'.format(id))
     mysql.connection.commit()
     flash('Project Removed Successfully')
-    return redirect(url_for('project.Index'))
+    return redirect(url_for('contacts.Index'))

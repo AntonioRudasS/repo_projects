@@ -6,13 +6,16 @@
       <div class="card card-body">
         <form action="/update/{{contact.id}}" method="POST">
           <div class="form-group">
-            <input type="text" name="fullname" value="{{contact.fullname}}" class="form-control">
+            <input type="text" name="autor" value="{{contact.autor}}" class="form-control">
           </div>
           <div class="form-group">
-            <input type="text" name="phone" value="{{contact.phone}}" class="form-control">
+            <input type="text" name="titulo" value="{{contact.titulo}}" class="form-control">
           </div>
           <div class="form-group">
-            <input type="text" name="email" value="{{contact.email}}" class="form-control">
+            <input type="text" name="objetivo" value="{{contact.objetivo}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="abstract" value="{{contact.abstract}}" class="form-control">
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">
